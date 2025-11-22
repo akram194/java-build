@@ -4,7 +4,7 @@ pipeline {
     stages {
 
         stage('Checkout') {
-			agent {label 'slave2'}
+			agent {label 'slave1'}
             steps {
                 echo "Checking out source code..."
                 git(
@@ -15,7 +15,7 @@ pipeline {
         }
 
         stage('Build') {
-			agent {label 'slave2'}
+			agent {label 'slave1'}
             steps {
                 echo "Building the application with Maven..."
                 sh ''' 
@@ -26,7 +26,7 @@ pipeline {
         }
 
         stage('Deploy') {
-			agent {label 'slave1'}
+			agent {label 'slave2'}
             steps {
                 echo "Deploying application..."
                 // Example deploy step
