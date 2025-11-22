@@ -19,6 +19,7 @@ pipeline {
             steps {
                 echo "Building the application with Maven..."
                 sh ''' 
+				export PATH=$PATH:/usr/share/maven
 				mvn clean package
 				'''
             }
