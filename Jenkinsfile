@@ -11,6 +11,10 @@ pipeline {
                     url: 'https://github.com/akram194/java-build.git',
                     branch: 'master'
                 )
+				sh '''
+				ls 
+				pwd
+				'''
             }
         }
 
