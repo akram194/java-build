@@ -13,8 +13,8 @@ pipeline {
                     branch: 'master'
                 )
               sh ''''
-              ls 
-              pwd
+                 ls 
+                 pwd
               '''
             }
         }
